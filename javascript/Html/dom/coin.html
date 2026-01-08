@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Store</title>
+    <style>
+        body{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vb;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        button{
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            color:white;
+            background-color: #d31c92;
+            border-radius: 8px;
+            border: 1px solid;
+            cursor: pointer;
+        }
+      
+    </style>
+</head>
+<body>
+    <h1>HEADS or TAILS</h1>
+    <p>Flip a virtual coin with this online and free app.</p>
+    <span>Head:0 Tails:0</span>
+    <img src="https://flipsimu.com/static/coin-image-big-b4e8096a3ec8ecc2b96d5998f19bda6c.png">
+    <button onclick="toss()">flip the coin</button>
+    <script>
+        let head_count=0
+        let tail_count=0
+        function toss(){
+            let image_ele=document.querySelector("img")
+            let span_ele=document.querySelector("span")
+            let ranNum=Math.round(Math.random()*100)
+            if(ranNum%2==0){
+                head_count+=1
+                image_ele.src="https://www.flipaindiancoin.in/img/coin-flip-heads.png"
+                console.log("i want to display head image",ranNum)
+                span_ele.innerHTML=`Head: ${head_count} Tails: ${tail_count}`
+            }
+            else{
+                tail_count+=1
+                image_ele.src="https://www.tossacoin.in/_next/image?url=%2Fhaids-tails.png&w=256&q=75"
+                console.log("i want to display tail image",ranNum)
+                span_ele.innerHTML=`Head: ${head_count} Tails: ${tail_count}`
+            }
+        }
+    </script>
+</body>
+</html>

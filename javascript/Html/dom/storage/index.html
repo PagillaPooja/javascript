@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Local Storage</h1>
+    <button onclick="changetheme()">click</button>
+    <script>
+        
+        function changetheme(){
+          console.log("function trigger")
+          document.body.style.backgroundColor="black"
+          document.body.style.color="white"
+          localStorage.setItem("theme","dark")
+
+        }
+    </script>
+</body>
+</html>

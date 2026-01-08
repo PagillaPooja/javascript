@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+          text-align: center;  
+        }
+    </style>
+</head>
+<body>
+    <h1>Counter App</h1>
+    <button onclick="Increment()">+</button>
+    <span>0</span>
+    <button onclick="decrement()">-</button>
+    <script>
+        function Increment(){
+        let count_ele=document.querySelector("span")
+        count_ele.innerHTML=Number(count_ele.innerHTML)+1
+        }
+        function decrement(){
+            let minus_ele=document.querySelector("span")
+            minus_ele.innerHTML=Number(minus_ele.innerHTML)-1
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        #snakecontainer{
+            border: 1px solid black;
+            width:500px;
+            height: 500px;
+            position: relative;
+        }
+        #snake{
+           width: 20px;
+           height: 20px;
+           background-color: greenyellow;
+           position: absolute;
+           left: 20px;  
+        }
+
+    </style>
+</head>
+<body>
+    <div id="snakecontainer">
+        <div id="snake">
+
+        </div>
+    </div>
+    <script>
+let Left =0
+let Top =0
+let snake_ele=document.getElementById("snake")
+random_num=Math.round(Math.random()*50)
+let random_position=Math.round(Math.random()*500)
+let bubble=document.createElement("div")
+bubble.style.height=random_num+"px"
+bubble.style.width=random_num+"px"
+bubble.style.borderRadius="50%"
+bubble.style.backgroundColor="red"
+bubble.style.position="absolute"
+bubble.style.top=random_position+"px"
+bubble.style.left=random_position+"px"
+let parent_ele=document.getElementById("snakecontainer")
+parent_ele.append(bubble)
+document.body.addEventListener("keyup", function(event) {
+    if (event.key == "ArrowRight") {
+      if(Left<480){
+        Left += 20
+        snake_ele.style.left = Left + "px"
+    } }
+    else if (event.key == "ArrowLeft") {
+        if(Left>0){
+          Left-=10
+        snake_ele.style.left = Left + "px"
+        }
+    } 
+    else if (event.key == "ArrowDown") {
+        if(Top<480){
+          Top+=20
+        snake_ele.style.top = Top + "px"  
+        }
+    } 
+    else if (event.key == "ArrowUp") {
+        Top -= 20
+        snake_ele.style.top = Top + "px"    }
+})
+</script>
+</body>
+</html>
+

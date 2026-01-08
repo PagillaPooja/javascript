@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <input type="text" placeholder="enter your name">
+    <input type="email" placeholder="enter your email">
+    <button>Submit</button>
+    </form>
+    <script>
+        let form_ele=document.querySelector("form")
+        form_ele.addEventListener("submit",function(event){
+            console.log(event)
+            console.log("form is submitted sucessfully")
+        })
+    </script>
+</body>
+</html>

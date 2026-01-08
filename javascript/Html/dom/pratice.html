@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: blueviolet;
+        }
+        h1{
+            color: aliceblue;
+        }
+        p{
+            color: aliceblue;
+        }
+        img{
+            height: 50px;
+            weight: 20px;
+        }
+        button{
+            margin-top: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px;
+            border: 1px,solid;
+
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Dice Roller Online</h1>
+    <p>Use the free virtual dice simulator from any device and generate dice online to your liking.</p>
+    <img src="https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-one.png">
+    <button onclick="dice()">Roll</button>
+    <script>
+        let img_ele=document.querySelector("img")
+        let ranNum=Math.round(Math.random()*100)
+        function dice(){
+            if(ranNum%2==0){
+                img_ele.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUnvsiboA45zTTz1n6BBRGmtWi6wzjjGCpVA&s"
+                console.log("i want to roll dice in 1",ranNum)
+            }
+            else{
+                img_ele.src="https://cdn-icons-png.flaticon.com/512/43/43723.png"
+                console.log("i want to roll dice in 2",ranNum)
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
